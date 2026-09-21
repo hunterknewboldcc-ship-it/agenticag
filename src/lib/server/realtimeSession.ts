@@ -38,7 +38,7 @@ export async function mintRealtimeSecret(sessionId?: string): Promise<{
       ms: 0,
       upstream: "missing_key",
     });
-    return { status: 500, body: { error: "XAI_API_KEY is not configured." } };
+    return { status: 500, body: { error: "xAI API key is not configured." } };
   }
 
   const started = Date.now();

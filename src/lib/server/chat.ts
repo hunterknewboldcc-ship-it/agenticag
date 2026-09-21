@@ -13,7 +13,7 @@ export type ChatTurn = {
 export async function streamChat(messages: ChatTurn[]): Promise<Response> {
   const key = getXaiApiKey();
   if (!key) {
-    return Response.json({ error: "XAI_API_KEY is not configured." }, { status: 500 });
+    return Response.json({ error: "xAI API key is not configured." }, { status: 500 });
   }
 
   const res = await fetch(CHAT_URL, {

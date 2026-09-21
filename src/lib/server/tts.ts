@@ -10,7 +10,7 @@ export type TtsUpstreamResult =
 export async function synthesizeSpeech(request: TtsRequest): Promise<TtsUpstreamResult> {
   const key = getXaiApiKey();
   if (!key) {
-    return { ok: false, status: 500, error: "XAI_API_KEY is not configured." };
+    return { ok: false, status: 500, error: "xAI API key is not configured." };
   }
 
   const payload: Record<string, unknown> = {
